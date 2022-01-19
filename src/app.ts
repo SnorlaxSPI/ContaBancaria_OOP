@@ -1,42 +1,10 @@
-import { ContaBancaria } from './models/ContaBancaria';
+import express from 'express';
+import { router } from './routes';
 
-const cb = new ContaBancaria('12345-6', '0123-4');
+const app = express();
 
-let saldoAtual: number = cb.consultar();
-console.log(`Saldo Inicial: ${saldoAtual}`);
+app.use(express.json());
+app.use(router);
 
-let itsOk:boolean = cb.depositar(50);
-if (!itsOk) {
-  console.log('Não foi possível realizar o depósito')
-} else {
-  saldoAtual = cb.consultar()
-  console.log(`Saldo Atual: ${saldoAtual}`);
-}
+export { app };
 
-itsOk = cb.depositar(100);
-if (!itsOk) {
-  console.log('Não foi possível realizar o depósito')
-} else {
-  saldoAtual = cb.consultar()
-  console.log(`Saldo Atual: ${saldoAtual}`);
-}
-
-itsOk = cb.sacar(30);
-if (!itsOk) {
-  console.log('Não foi possível realizar o saque')
-} else {
-  saldoAtual = cb.consultar()
-  console.log(`Saldo Atual: ${saldoAtual}`);
-}
-
-itsOk = cb.sacar(5);
-if (!itsOk) {
-  console.log('Não foi possível realizar o saque')
-} else {
-  saldoAtual = cb.consultar()
-  console.log(`Saldo Atual: ${saldoAtual}`);
-}
-
-//cb.numero = '01234-5';
-//cb.agencia = '123-5'
-console.log(cb);
