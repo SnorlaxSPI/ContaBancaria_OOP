@@ -7,11 +7,38 @@ export class ContaBancaria {
     this._saldo = 0;
     this._numero = '00000-0';
     this._agencia = '0000-0';
-  }
+  };
+
+  get numero(): string {
+    return this._numero;
+  };
+
+  set numero(valor: string) {
+    const regex = /^\d{5}-\d{1}$/;
+    if(regex.test(valor)) {
+      this._numero = valor;
+    } else {
+    console.log('Formato de número inválido');
+    };
+  };
+
+  get agencia(): string {
+    return this._agencia;
+  };
+
+  set agencia(valor: string) {
+    const regex = /^\d{4}-\d{1}$/;
+    if(regex.test(valor)) {
+      this._agencia = valor;
+    } else {
+    console.log('Formato de agência inválido');
+    };
+  };
+
 
   consultar() {
     return this._saldo;
-  }
+  };
 
   depositar(valor: number): boolean {
     if (valor >= 0) {

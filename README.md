@@ -3,7 +3,9 @@
  * Constructor: função que é invocada no momento da instanciação (criação) do objeto
  * 
  * Getter: Método que dá acesso ao valor de um determinado atributo (provavelmente privado)
+ * Setter: Método que realiza a alteração do valor de um determinado atributo (provavelmente privado)
  * 
  */
+
 
 
