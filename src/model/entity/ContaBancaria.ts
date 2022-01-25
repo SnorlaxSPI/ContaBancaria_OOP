@@ -3,7 +3,7 @@ export class ContaBancaria {
    private _numero!: string;
    private _agencia!: string;
 
-  constructor(numero: string, agencia: string) {
+  constructor(numero?: any, agencia?: any) {
     this._saldo = 0;
     this.numero = this._validarNumero(numero) ? numero : '00000-0';
     this.agencia = this._validarAgencia(agencia) ? agencia : '0000-0';

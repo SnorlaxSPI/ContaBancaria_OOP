@@ -1,4 +1,4 @@
-import { ContaBancaria } from './models/ContaBancaria';
+import { ContaBancaria } from './model/entity/ContaBancaria';
 import { Router } from 'express';
 
 const router = Router();

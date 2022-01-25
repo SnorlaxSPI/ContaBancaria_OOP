@@ -4,7 +4,8 @@
  * 
  * Getter: Método que dá acesso ao valor de um determinado atributo (provavelmente privado)
  * Setter: Método que realiza a alteração do valor de um determinado atributo (provavelmente privado)
- * 
+ *
+ * Code Coverage: Mede o quanto do código está sendo coberto quando os testes são executados 
  */
 
 
